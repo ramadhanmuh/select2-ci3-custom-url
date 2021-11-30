@@ -9,8 +9,7 @@
         <meta name="author" content="<?= $this->config->item('author') ?>" />
         <meta name="url" content="<?= base_url('') ?>" />
 
-        <?php $this->load->view('template/_style') ?>
-
+        <link href="<?= base_url('vendor/sb-admin/') ?>css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="<?= base_url('vendor/select2/dist/css/select2.min.css') ?>">
 
         <title><?= $this->config->item('nama_situs') ?> - Masuk</title>
@@ -35,13 +34,11 @@
                 </div>
             </div>
         </div>
-
-        <?php $this->load->view('template/_script') ?>
+        <script src="<?= base_url('vendor/jquery/jquery.min.js') ?>"></script>
         <script src="<?= base_url('vendor/select2/dist/js/select2.full.min.js') ?>"></script>
         <script>
             $(document).ready(function() {
                 var idPengguna = $('#pengguna').find('option:selected').val();
-                console.log(idPengguna);
 
                 $('#pengguna').change(function () {
                     idPengguna = $(this).find('option:selected').val();
